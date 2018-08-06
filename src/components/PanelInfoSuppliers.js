@@ -10,7 +10,7 @@ class PanelInfoSuppliers extends React.Component {
       offersSent
     } = this.props;
     return (
-      <div className="dbs__pis">
+      <ul className="dbs__pis">
         <MarketTable
           type="invitation"
           markets={invitations}
@@ -26,7 +26,7 @@ class PanelInfoSuppliers extends React.Component {
           markets={offersSent}
           selectedMarketState={selectedMarketState}
         />
-      </div>
+      </ul>
     );
   }
 }

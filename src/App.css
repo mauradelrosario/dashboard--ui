@@ -58,7 +58,7 @@ body,
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background: #f8f8f9;
+  background: #F3F4F6;
   border-left: #e3e4e6 1px solid;
 }
 
@@ -85,6 +85,7 @@ body,
 .dbs__ps--wrap {
   flex: 0.5;
   display: flex;
+  padding-right: 15px;
   background: #e3e4e6;
 }
 
@@ -97,20 +98,20 @@ body,
   border-radius: 5%;
   margin: 10px 5px;
   padding: 15px 0px;
-  background: whitesmoke;
+  background: #FFFFFF;
   border: whitesmoke 1px solid;
 }
 
 .bs__ps__market-status--invitation {
-  border: orangered 1px solid;
+  border: #F5C77E 1px solid;
 }
 
 .bs__ps__market-status--rfq {
-  border: blue 1px solid;
+  border: #6DBDDF 1px solid;
 }
 
 .bs__ps__market-status--offersent {
-  border: green 1px solid;
+  border: #73CDBB 1px solid;
 }
 
 .bs__ps__market-status-number {
@@ -125,19 +126,19 @@ body,
 .bs__ps__market-status--bottom-line-invitation {
   display: inline-block;
   width: 35%;
-  border-bottom: 2px solid orangered;
+  border-bottom: 2px solid #F5C77E;
 }
 
 .bs__ps__market-status--bottom-line-rfq {
   display: inline-block;
   width: 35%;
-  border-bottom: 2px solid blue;
+  border-bottom: 2px solid #6DBDDF;
 }
 
 .bs__ps__market-status--bottom-line-offersent {
   display: inline-block;
   width: 35%;
-  border-bottom: 2px solid green;
+  border-bottom: 2px solid #73CDBB;
 }
 
 /*******************************
@@ -148,7 +149,9 @@ body,
   background: #f8f8f9;
   display: grid;
   grid-auto-columns: auto auto auto;
-  margin: 15px;
+  margin: 0px;
+  padding: 15px;
+  list-style: none;
 }
 
 .dbs__pis__market-table {
@@ -158,7 +161,7 @@ body,
 
 .dbs__pis__market-table__title {
   font-size: large;
-  color: grey;
+  color: #B9BDC7;
 }
 
 .dbs__pis__market-table__heading {
@@ -195,6 +198,7 @@ body,
   flex: 0.5;
   display: flex;
   justify-content: space-between;
+  padding-right: 15px;
 }
 
 .dbs__pis__market-table__details__name-technology {
@@ -229,7 +233,7 @@ body,
 }
 
 .dbs__pis__market-table__details__bordure-left--invitation {
-  border-left: orangered 3px solid;
+  border-left: #E4AF4B 3px solid;
 }
 
 .dbs__pis__market-table__details__bordure-left--rfq {

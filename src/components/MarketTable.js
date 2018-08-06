@@ -21,6 +21,7 @@ class MarketTable extends React.Component {
     }
 
     return (
+      <li>
       <article className="dbs__pis__market-table" style={style}>
         <div className="dbs__pis__market-table__title">{name}</div>
         <div className="dbs__pis__market-table__heading">
@@ -41,6 +42,7 @@ class MarketTable extends React.Component {
           ))}
         </div>
       </article>
+      </li>
     );
   }
 }
