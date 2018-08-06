@@ -21,9 +21,9 @@ class App extends Component {
   componentDidMount() {
     fetch("/api/markets.json")
     .then((response) => {
-      console.log(response.url);
-      return response.json();
-  
+      let test = response.json();
+      console.log(test);
+      return test;
     })
       .then(markets => {
         const invitations = this.getFilteredInvitations({ markets });
