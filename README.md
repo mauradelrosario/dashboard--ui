@@ -1,11 +1,15 @@
+## Dashboard--ui
+   * BEM structure
+   * Filter feature
+
 ## Demo
 
-   * [Demo](https://dashboard-filter.herokuapp.com/)
+   * [Demo link](https://dashboard-filter.herokuapp.com/)
 
 ## Installation
    * **npm install**
 
 ## Usage
-   * git clone
-   * installation of packages
-   * yarn start
+   * **git clone**
+   * **npm install** - installation of packages
+   * **yarn start**
