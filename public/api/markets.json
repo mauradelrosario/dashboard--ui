@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "company_name": "Naji Buyer - DANY - CAST AND MACHINE TUBE",
+    "company_techno": "Plastic additive Fabrication",
+    "offer_amount": "",
+    "nb_suppliers": "From 5 to 10",
+    "status": false,
+    "statusFilter": "invitation"
+  },
+  {
+    "id": "2",
+    "company_name": "Buyer unlimited - DUPLICATE OF MODEL RFQ SIMPLE",
+    "company_techno": "Metal Manufacturing Technologies",
+    "offer_amount": "0 €",
+    "nb_suppliers": "From 5 to 10",
+    "status": true,
+    "statusFilter": "rfq"
+  },
+  {
+    "id": "3",
+    "company_name": "Naji Buyer - DANY - CAST AND MACHINE TUBE",
+    "company_techno": "Plastic additive Fabrication",
+    "offer_amount": "3 000 €",
+    "nb_suppliers": "From 5 to 10",
+    "status": false,
+    "statusFilter": "offersent"
+  },
+  {
+    "id": "4",
+    "company_name": "A buyer s55 rcq - TEST FORM POUR OFFRE",
+    "company_techno": "Aluminum Heat treatment",
+    "offer_amount": "10 000 €",
+    "nb_suppliers": "Less than 5",
+    "status": false,
+    "statusFilter": "offersent"
+  }
+]

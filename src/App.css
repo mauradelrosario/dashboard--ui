@@ -1,28 +1,270 @@
-.App {
+/*************************
+      dashboard-suppliers = dbs
+***************************/
+body,
+#root,
+.dbs {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-size: small;
+}
+
+/************************************* 
+          dashboard-suppliers 
+          sidebar container 
+**************************************/
+.dbs__sidebar {
+  flex: 0.01;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.dbs__sidebar__items ul {
+  padding: 0px;
+  margin: 0;
+}
+.dbs__sidebar__items li i {
+  padding: 15px;
+  list-style: none;
+  color: grey;
+  opacity: 0.5;
+  border: white 2px solid;
+}
+
+.dbs__sidebar__items li i:hover {
+  color: #fff;
+  opacity: 1;
+  background: #6ee5bf;
+  border: #ddd 2px solid;
+}
+
+.dbs__sidebar__items__user-circle {
+  padding: 15px;
+  color: grey;
+  margin-top: 700px;
+  border-top: #e3e4e6 2px solid;
+}
+
+/*************************
+        dashboard-suppliers 
+            Panel 
+**************************/
+.dbs__panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #f8f8f9;
+  border-left: #e3e4e6 1px solid;
+}
+
+.dbs__panel--header {
+  flex: 0.1 0;
+}
+
+.dbs__panel--body {
+  flex: 1;
+  max-height: 1024px;
+}
+/*******************************
+        dashboard-suppliers
+        Panel Status = ps
+********************************/
+.dbs__ps {
+  display: flex;
+  justify-content: flex-end;
   text-align: center;
+  background: #e3e4e6;
+  padding-bottom: 15px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.dbs__ps--wrap {
+  flex: 0.5;
+  display: flex;
+  background: #e3e4e6;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+/*******************************
+        dashboard-suppliers
+        Market Status
+********************************/
+.bs__ps__market-status {
+  flex: 1;
+  border-radius: 5%;
+  margin: 10px 5px;
+  padding: 15px 0px;
+  background: whitesmoke;
+  border: whitesmoke 1px solid;
 }
 
-.App-title {
-  font-size: 1.5em;
+.bs__ps__market-status--invitation {
+  border: orangered 1px solid;
 }
 
-.App-intro {
+.bs__ps__market-status--rfq {
+  border: blue 1px solid;
+}
+
+.bs__ps__market-status--offersent {
+  border: green 1px solid;
+}
+
+.bs__ps__market-status-number {
+  font-size: medium;
+}
+
+.bs__ps__market-status-name {
+  opacity: 0.5;
+  padding: 5px;
+}
+
+.bs__ps__market-status--bottom-line-invitation {
+  display: inline-block;
+  width: 35%;
+  border-bottom: 2px solid orangered;
+}
+
+.bs__ps__market-status--bottom-line-rfq {
+  display: inline-block;
+  width: 35%;
+  border-bottom: 2px solid blue;
+}
+
+.bs__ps__market-status--bottom-line-offersent {
+  display: inline-block;
+  width: 35%;
+  border-bottom: 2px solid green;
+}
+
+/*******************************
+    dashboard-suppliers = dbs
+    Panel Info Suppliers = pis
+********************************/
+.dbs__pis {
+  background: #f8f8f9;
+  display: grid;
+  grid-auto-columns: auto auto auto;
+  margin: 15px;
+}
+
+.dbs__pis__market-table {
+  background: #f8f8f9;
+  padding: 5px;
+}
+
+.dbs__pis__market-table__title {
   font-size: large;
+  color: grey;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.dbs__pis__market-table__heading {
+  display: flex;
+  color: rgb(168, 168, 168);
+  margin: 15px;
+}
+
+.dbs__pis__market-table__heading--wrap {
+  flex: 0.5;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dbs__pis__market-table__heading__status-suppliers {
+  flex: 0.2;
+  padding-left: 5%;
+  text-align: right;
+}
+/*******************************
+        dashboard-suppliers 
+        Market Details
+********************************/
+
+.dbs__pis__market-table__details {
+  display: flex;
+  border: whitesmoke 3px solid;
+  background: white;
+  padding: 20px;
+  color: grey;
+}
+
+.dbs__pis__market-table__details--wrap {
+  flex: 0.5;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dbs__pis__market-table__details__name-technology {
+  display: flex;
+  flex-direction: column;
+}
+
+.dbs__pis__market-table__details__suppliers {
+  flex: 0.3;
+  padding-left: 5%;
+  text-align: left;
+}
+.dbs__pis__market-table__details__status {
+  flex: 0.4;
+}
+
+.dbs__pis__market-table__details__status-offer--btn {
+  border-radius: 70px;
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+  padding: 10px;
+  font-size: small;
+  float: right;
+}
+
+.dbs__pis__market-table__details__status--approval {
+  flex: 0.5;
+  display: grid;
+  grid-template-columns: 20% 100%;
+  float: right;
+}
+
+.dbs__pis__market-table__details__bordure-left--invitation {
+  border-left: orangered 3px solid;
+}
+
+.dbs__pis__market-table__details__bordure-left--rfq {
+  border-left: blue 3px solid;
+}
+
+.dbs__pis__market-table__details__bordure-left--offersent {
+  border-left: green 3px solid;
+}
+/*******************************
+        dashboard-suppliers 
+        Panel-footer
+********************************/
+.dbs__panel-footer {
+  display: grid;
+  grid-template-columns: 15% 20% 1fr 20% 15%;
+  background: #f8f8f9;
+  padding: 50px;
+}
+
+span {
+  display: inline-block;
+  font-size: small;
+  padding-left: 10px;
+  color: grey;
+  opacity: 0.5;
+}
+
+.dbs__panel-footer__logo,
+i {
+  text-align: center;
+  opacity: 0.5;
+}
+
+.dbs__panel-footer__localisation {
+  display: grid;
+  grid-template-columns: 5% 90%;
 }

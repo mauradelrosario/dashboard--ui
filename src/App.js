@@ -1,18 +1,89 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import SideBar from "./components/Sidebar";
+import FooterContact from "./components/FooterContact";
+import PanelStatus from "./components/PanelStatus";
+import PanelInfoSupliers from "./components/PanelInfoSuppliers";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      markets: [],
+      invitations: [],
+      rfqs: [],
+      offersSent: [],
+      selectedMarket: null
+    };
+    this.handleSelectedMarket = this.handleSelectedMarket.bind(this);
+  }
+/*Calling the api && get a filter for each status*/
+  componentDidMount() {
+    fetch("/api/markets.json")
+    .then((response) => {
+      console.log(response.url);
+      return response.json();
+  
+    })
+      .then(markets => {
+        const invitations = this.getFilteredInvitations({ markets });
+        const rfqs = this.getFilteredRfqs({ markets });
+        const offersSent = this.getFilteredOffersSent({ markets });
+        this.setState({
+          markets,
+          invitations,
+          rfqs,
+          offersSent
+        });
+      });
+  }
+
+
+  getFilteredInvitations({ markets }) {
+    return markets.filter(market => market.statusFilter === "invitation");
+  }
+
+  getFilteredRfqs({ markets }) {
+    return markets.filter(market => market.statusFilter === "rfq");
+  }
+
+  getFilteredOffersSent({ markets }) {
+    return markets.filter(market => market.statusFilter === "offersent");
+  }
+
+  /*Function to change the state of selectedMarket means when user click on the box */
+  handleSelectedMarket(type) {
+    this.setState({
+      selectedMarket: type
+    });
+  }
+
   render() {
+    const { selectedMarket, invitations, rfqs, offersSent } = this.state;
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="dbs">
+        <SideBar onSelectedMarket={this.handleSelectedMarket} />
+        <main className="dbs__panel">
+          <div className="dbs__panel--header">
+            <PanelStatus
+              selectedMarketState={selectedMarket}
+              onSelectedMarket={this.handleSelectedMarket}
+              invitations={invitations}
+              rfqs={rfqs}
+              offersSent={offersSent}
+            />
+          </div>
+          <div className="dbs__panel--body">
+            <PanelInfoSupliers
+              selectedMarketState={selectedMarket}
+              onSelectedMarket={this.handleSelectedMarket}
+              invitations={invitations}
+              rfqs={rfqs}
+              offersSent={offersSent}
+            />
+            <FooterContact />
+          </div>
+        </main>
       </div>
     );
   }
