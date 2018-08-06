@@ -1,10 +1,9 @@
+## Demo
+   * [Demo link](https://dashboard-filter.herokuapp.com/)
+
 ## Dashboard--ui
    * BEM structure
    * Filter feature
-
-## Demo
-
-   * [Demo link](https://dashboard-filter.herokuapp.com/)
 
 ## Installation
    * **npm install**
