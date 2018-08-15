@@ -36,7 +36,7 @@ class MarketTable extends React.Component {
             <div>Your status</div>
           </div>
         </div>
-        <div>
+        <div className="dbs__pis__market-table__detail">
           {markets.map(market => (
             <MarketDetail key={market.id} type={type} {...market} />
           ))}

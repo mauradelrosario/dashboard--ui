@@ -21,8 +21,10 @@ class MarketStatus extends React.Component {
           onSelectedMarket(type);
         }}
       >
-        <div className="bs__ps__market-status-number">{this.props.markets.length}</div>
-        <div className="bs__ps__market-status-name">{name}</div>
+        <div className="bs__ps__market-status-number">
+          {this.props.markets.length}
+        </div>
+        <div className={"bs__ps__market-status-name-" + type}>{name}</div>
         <div className={"bs__ps__market-status--bottom-line-" + type} />
       </div>
     );

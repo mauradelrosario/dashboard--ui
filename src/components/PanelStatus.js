@@ -11,28 +11,26 @@ class PanelStatus extends React.Component {
       offersSent
     } = this.props;
     return (
-      <header className="dbs__ps">
-        <div className="dbs__ps--wrap">
-          <MarketStatus
-            type="invitation"
-            markets={invitations}
-            onSelectedMarket={onSelectedMarket}
-            selectedMarketState={selectedMarketState}
-          />
-          <MarketStatus
-            type="rfq"
-            markets={rfqs}
-            onSelectedMarket={onSelectedMarket}
-            selectedMarketState={selectedMarketState}
-          />
-          <MarketStatus
-            type="offersent"
-            markets={offersSent}
-            onSelectedMarket={onSelectedMarket}
-            selectedMarketState={selectedMarketState}
-          />
-        </div>
-      </header>
+      <div className="dbs__ps--wrap">
+        <MarketStatus
+          type="invitation"
+          markets={invitations}
+          onSelectedMarket={onSelectedMarket}
+          selectedMarketState={selectedMarketState}
+        />
+        <MarketStatus
+          type="rfq"
+          markets={rfqs}
+          onSelectedMarket={onSelectedMarket}
+          selectedMarketState={selectedMarketState}
+        />
+        <MarketStatus
+          type="offersent"
+          markets={offersSent}
+          onSelectedMarket={onSelectedMarket}
+          selectedMarketState={selectedMarketState}
+        />
+      </div>
     );
   }
 }

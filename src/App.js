@@ -64,7 +64,7 @@ class App extends Component {
       <div className="dbs">
         <SideBar onSelectedMarket={this.handleSelectedMarket} />
         <main className="dbs__panel">
-          <div className="dbs__panel--header">
+          <header className="dbs__panel--header">
             <PanelStatus
               selectedMarketState={selectedMarket}
               onSelectedMarket={this.handleSelectedMarket}
@@ -72,7 +72,7 @@ class App extends Component {
               rfqs={rfqs}
               offersSent={offersSent}
             />
-          </div>
+          </header>
           <div className="dbs__panel--body">
             <PanelInfoSupliers
               selectedMarketState={selectedMarket}
