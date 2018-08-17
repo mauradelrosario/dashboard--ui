@@ -3,7 +3,7 @@
 ***************************/
 body,
 #root,
-.dbs {
+main {
   display: flex;
   font-size: small;
 }
@@ -14,8 +14,8 @@ body,
 **************************************/
 .dbs__sidebar {
   flex: 0.01;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   background: #fff;
 }
 
@@ -57,7 +57,7 @@ body,
 }
 
 .dbs__panel--header {
-  flex: 0.3 0;
+  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
   /* display: flex;
   justify-content: flex-end;
   background: #e3e4e6;  */
@@ -214,6 +214,7 @@ body,
   padding: 10px;
   font-size: small;
   float: right;
+  white-space: normal;
 }
 
 .dbs__pis__market-table__details__status--approval {
@@ -239,10 +240,10 @@ body,
         Panel-footer
 ********************************/
 .dbs__panel-footer {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 15% 20% 1fr 20% 15%;
   background: #f3f4f6;
-  padding: 40px 0px;
+  padding: 40px 0px; */
 }
 
 .dbs__panel-footer__span {

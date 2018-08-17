@@ -3,7 +3,7 @@
 ***************************/
 body,
 #root,
-.dbs {
+main {
   width: 100vw;
   height: 100vh;
   background: beige;
@@ -14,7 +14,9 @@ Breakpoint width 320px - height: 480px
 **************************************/
 
 @media (min-width: 320px) {
+  /* Sidebar */
   .dbs__sidebar {
+    display: none;
     height: 100vh;
     width: 15vw;
   }
@@ -25,20 +27,24 @@ Breakpoint width 320px - height: 480px
   .dbs__sidebar__items__user-circle {
     height: 10vh;
   }
-
+/* Panel 100 = 20 + 80*/
   .dbs__panel {
     height: 100vh;
     width: 85vw;
     /* border: 1px solid #6dbddf; */
   }
-
+/* Panel Header */
   .dbs__panel--header {
-    height: 20vh;
+    flex: 0.1 0;
+    /* height: 20vh;
+    width: 85vw; */
+    background: rgba(121, 202, 186, 0.9);
   }
 
   .dbs__ps--wrap {
     height: 20vh;
     border: 1px solid yellow;
+    display: none;
   }
 
   .bs__ps__market-status {
@@ -54,16 +60,17 @@ Breakpoint width 320px - height: 480px
   }
 
   .dbs__panel--body {
-    height: 80vh;
+    height: 85vh;
+    background: greenyellow;
     /* border: 1px solid greenyellow; */
   }
   .dbs__pis {
-    height: 60vh;
+    height: 70vh;
     width: 80vw;
   }
 
   .dbs__pis li {
-    height: 60vh;
+    height: 70vh;
     width: 80vw;
   }
 
@@ -87,7 +94,7 @@ Breakpoint width 320px - height: 480px
   }
 
   .dbs__panel-footer {
-    height: 20vh;
+    display: none;
   }
 }
 
@@ -111,7 +118,7 @@ Breakpoint width 1024px - height: 800px
   }
 
   .dbs__panel--header {
-    height: 20vh;
+    flex: 0.3 0;
   }
 
   .dbs__ps .dbs__ps--wrap .bs__ps__market-status {

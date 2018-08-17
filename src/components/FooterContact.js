@@ -12,7 +12,7 @@ class FooterContact extends React.Component {
           <span className="dbs__panel-footer__span">Legal notices</span>
           <span className="dbs__panel-footer__span">General Terms and Conditions of Sales</span>
         </div>
-        <div className="dbs__panel-footer__logo">
+        {/* <div className="dbs__panel-footer__logo">
           <i className="fa x2 fa-pied-piper-alt" />
         </div>
         <div className="dbs__panel-footer__contact">
@@ -31,7 +31,7 @@ class FooterContact extends React.Component {
             <span className="dbs__panel-footer__span"> Station F</span>
             <span className="dbs__panel-footer__span">75000 Paris FRANCE</span>
           </div>
-        </div>
+        </div> */}
       </footer>
     );
   }

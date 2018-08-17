@@ -61,9 +61,9 @@ class App extends Component {
   render() {
     const { selectedMarket, invitations, rfqs, offersSent } = this.state;
     return (
-      <div className="dbs">
+      <main>
         <SideBar onSelectedMarket={this.handleSelectedMarket} />
-        <main className="dbs__panel">
+        <div className="dbs__panel">
           <header className="dbs__panel--header">
             <PanelStatus
               selectedMarketState={selectedMarket}
@@ -83,8 +83,8 @@ class App extends Component {
             />
             <FooterContact />
           </div>
-        </main>
-      </div>
+        </div>
+      </main>
     );
   }
 }
