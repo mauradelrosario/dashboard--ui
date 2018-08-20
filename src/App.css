@@ -12,6 +12,7 @@ main {
           dashboard-suppliers 
           sidebar container 
 **************************************/
+
 .dbs__sidebar {
   flex: 0.01;
   /* display: flex;
@@ -235,6 +236,7 @@ main {
 .dbs__pis__market-table__details__bordure-left--offersent {
   border-left: green 3px solid;
 }
+
 /*******************************
         dashboard-suppliers 
         Panel-footer

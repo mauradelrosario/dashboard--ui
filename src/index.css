@@ -1,3 +1,8 @@
+
+
+
+
+
 /*************************
       dashboard-suppliers = dbs
 ***************************/
@@ -293,11 +298,10 @@ Breakpoint width 1024px - height: 800px
         dashboard-suppliers 
         Panel-footer
 ********************************/
-
-/* .dbs__panel-footer {
+.dbs__panel-footer {
   display: grid;
   grid-template-columns: 15% 20% 1fr 20% 15%;
-  background: #F3F4F6;
+  background: #f8f8f9;
   padding: 50px;
 }
 
@@ -318,4 +322,4 @@ i {
 .dbs__panel-footer__localisation {
   display: grid;
   grid-template-columns: 5% 90%;
-} */
+} 
