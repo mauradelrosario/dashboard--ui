@@ -4,106 +4,152 @@
 body,
 #root,
 main {
-  display: flex;
-  font-size: small;
+  width: 100vw;
+  height: 100vh;
+  background: beige;
 }
 
 /************************************* 
-          dashboard-suppliers 
-          sidebar container 
+Breakpoint width 320px - height: 480px
 **************************************/
-.dbs__sidebar {
-  flex: 0.01;
-  /* display: flex;
-  flex-direction: column; */
-  background: #fff;
+
+@media (min-width: 320px) {
+  /* Sidebar */
+  .dbs__sidebar {
+    display: none;
+  }
+
+  .dbs__panel {
+    height: 100vh;
+    width: 85vw;
+    /* border: 1px solid #6dbddf; */
+  }
+/* Panel Header */
+  .dbs__panel--header {
+    flex: 0.1 0;
+    /* height: 20vh;
+    width: 85vw; */
+    background: rgba(121, 202, 186, 0.9);
+  }
+
+  .dbs__ps--wrap {
+    height: 20vh;
+    border: 1px solid yellow;
+    display: none;
+  }
+
+  .bs__ps__market-status {
+    border: 1px solid red;
+    margin: 5px;
+    width: 80vw;
+    height: 5vh;
+    display: flex;
+  }
+
+  .bs__ps__market-status-number .bs__ps__market-status-name {
+    display: inline-block;
+  }
+
+  .dbs__panel--body {
+    height: 85vh;
+    background: greenyellow;
+    /* border: 1px solid greenyellow; */
+  }
+  .dbs__pis {
+    height: 70vh;
+    width: 80vw;
+  }
+
+  .dbs__pis li {
+    height: 70vh;
+    width: 80vw;
+  }
+
+  article {
+    height: 20vh;
+    width: 80vw;
+  }
+
+  .dbs__pis__market-table__title .dbs__pis__market-table__heading {
+    height: 5vh;
+  }
+
+  .dbs__pis__market-table__heading--wrap
+    .dbs__pis__market-table__details--wrap {
+    height: 2.5vh;
+    width: 80vw;
+  }
+
+  .dbs__pis__market-table__detail {
+    height: 10vh;
+  }
+
+  .dbs__panel-footer {
+    display: none;
+  }
 }
 
-.dbs__sidebar__items ul {
-  padding: 0px;
-  margin: 0;
-  list-style: none;
-}
-.dbs__sidebar__items li i {
-  padding: 15px;
-  color: grey;
-  opacity: 0.5;
-  border: white 2px solid;
+/************************************* 
+Breakpoint width 1024px - height: 800px
+**************************************/
+
+@media (min-width: 1024px) {
+  .dbs__sidebar {
+    height: 100vh;
+  }
+  .dbs__sidebar__items {
+    height: 90vh;
+  }
+  .dbs__sidebar__items__user-circle {
+    height: 10vh;
+  }
+  .dbs__panel {
+    /* height: 100vh;
+    width: 100vw; */
+  }
+
+  .dbs__panel--header {
+    flex: 0.3 0;
+  }
+
+  .dbs__ps .dbs__ps--wrap .bs__ps__market-status {
+    height: 100vh;
+  }
+
+  .dbs__panel--body {
+    height: 80vh;
+  }
 }
 
-.dbs__sidebar__items li i:hover {
-  color: #fff;
-  opacity: 1;
-  background: #6ee5bf;
-  border: #ddd 2px solid;
-}
-
-.dbs__sidebar__items__user-circle {
-  padding: 15px;
-  color: grey;
-  border-top: #e3e4e6 2px solid;
-}
-
-/*************************
-        dashboard-suppliers 
-            Panel 
-**************************/
-.dbs__panel {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  background: #F3F4F6;
-}
-
-.dbs__panel--header {
-  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-  /* display: flex;
-  justify-content: flex-end;
-  background: #e3e4e6;  */
-  text-align: center;
-  /* padding-bottom: 15px; */
-}
-
-.dbs__panel--body {
-  flex: 1;
-  border-left: #e3e4e6 1px solid;
-}
-/*******************************
-        dashboard-suppliers
-        Panel Status = ps
-********************************/
+/* 
 
 .dbs__ps--wrap {
-  /* flex: 0.5;
-  display: flex; 
-  background: #e3e4e6;
-  padding-right: 15px;   */
-}
+ 
+} */
 
 /*******************************
         dashboard-suppliers
         Market Status
 ********************************/
-.bs__ps__market-status {
-  /* flex: 1; 
-  background: #ffffff;*/
+/* .bs__ps__market-status {
+  flex: 1;
   border-radius: 5%;
-  /* margin: 10px 5px;
+  margin: 10px 5px;
   padding: 15px 0px;
-  border: whitesmoke 1px solid; */
+  background: #FFFFFF;
+  border: whitesmoke 1px solid;
 }
 
 .bs__ps__market-status--invitation {
-  border: #f5c77e 1px solid;
+  border: #F5C77E 1px solid;
 }
 
 .bs__ps__market-status--rfq {
-  border: #6dbddf 1px solid;
+  border: #6DBDDF 1px solid;
 }
 
 .bs__ps__market-status--offersent {
-  border: #73cdbb 1px solid;
+  border: #73CDBB 1px solid;
 }
 
 .bs__ps__market-status-number {
@@ -118,69 +164,69 @@ main {
 .bs__ps__market-status--bottom-line-invitation {
   display: inline-block;
   width: 35%;
-  border-bottom: 2px solid #f5c77e;
+  border-bottom: 2px solid #F5C77E;
 }
 
 .bs__ps__market-status--bottom-line-rfq {
   display: inline-block;
   width: 35%;
-  border-bottom: 2px solid #6dbddf;
+  border-bottom: 2px solid #6DBDDF;
 }
 
 .bs__ps__market-status--bottom-line-offersent {
   display: inline-block;
   width: 35%;
-  border-bottom: 2px solid #73cdbb;
-}
+  border-bottom: 2px solid #73CDBB;
+} */
 
 /*******************************
     dashboard-suppliers = dbs
     Panel Info Suppliers = pis
 ********************************/
-.dbs__pis {
-  /* background: #F3F4F6; */
+/* .dbs__pis {
+  background: #F3F4F6;
   display: grid;
   grid-auto-columns: auto auto auto;
   margin: 0px;
-  padding: 0px;
+  padding: 15px;
   list-style: none;
 }
 
 .dbs__pis__market-table {
-  background: #f3f4f6;
+  background: #F3F4F6;
   padding: 5px;
 }
 
 .dbs__pis__market-table__title {
-  /* font-size: large; */
-  color: #b9bdc7;
+  font-size: large;
+  color: #B9BDC7;
 }
 
 .dbs__pis__market-table__heading {
-  /* display: flex; */
+  display: flex;
   color: rgb(168, 168, 168);
-  /* margin: 15px; */
+  margin: 15px;
 }
 
 .dbs__pis__market-table__heading--wrap {
-  /* flex: 0.5;
+  flex: 0.5;
   display: flex;
-  justify-content: space-between; */
+  justify-content: space-between;
 }
 
 .dbs__pis__market-table__heading__status-suppliers {
-  /* flex: 0.2;
+  flex: 0.2;
   padding-left: 5%;
-  text-align: right; */
-}
+  text-align: right;
+} */
 /*******************************
         dashboard-suppliers 
         Market Details
 ********************************/
 
-.dbs__pis__market-table__details {
+/* .dbs__pis__market-table__details {
   display: flex;
-  border: #eae9ec 1px solid;
+  border: #EAE9EC 1px solid;
   background: white;
   padding: 20px;
   color: grey;
@@ -210,11 +256,10 @@ main {
 .dbs__pis__market-table__details__status-offer--btn {
   border-radius: 70px;
   color: #fff;
-  background-color: #00cab4;
+  background-color: #00CAB4;
   padding: 10px;
   font-size: small;
   float: right;
-  white-space: normal;
 }
 
 .dbs__pis__market-table__details__status--approval {
@@ -225,7 +270,7 @@ main {
 }
 
 .dbs__pis__market-table__details__bordure-left--invitation {
-  border-left: #e4af4b 3px solid;
+  border-left: #E4AF4B 3px solid;
 }
 
 .dbs__pis__market-table__details__bordure-left--rfq {
@@ -234,19 +279,20 @@ main {
 
 .dbs__pis__market-table__details__bordure-left--offersent {
   border-left: green 3px solid;
-}
+} */
 /*******************************
         dashboard-suppliers 
         Panel-footer
 ********************************/
-.dbs__panel-footer {
-  /* display: grid;
+
+/* .dbs__panel-footer {
+  display: grid;
   grid-template-columns: 15% 20% 1fr 20% 15%;
-  background: #f3f4f6;
-  padding: 40px 0px; */
+  background: #F3F4F6;
+  padding: 50px;
 }
 
-.dbs__panel-footer__span {
+span {
   display: inline-block;
   font-size: small;
   padding-left: 10px;
@@ -263,4 +309,4 @@ i {
 .dbs__panel-footer__localisation {
   display: grid;
   grid-template-columns: 5% 90%;
-}
+} */

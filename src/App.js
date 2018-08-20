@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./App.css";
 import SideBar from "./components/Sidebar";
 import FooterContact from "./components/FooterContact";
 import PanelStatus from "./components/PanelStatus";
