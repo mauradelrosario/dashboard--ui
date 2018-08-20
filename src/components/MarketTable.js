@@ -25,16 +25,18 @@ class MarketTable extends React.Component {
       <article className="dbs__pis__market-table" style={style}>
         <div className="dbs__pis__market-table__title">{name}</div>
         <div className="dbs__pis__market-table__heading">
-          <div className="dbs__pis__market-table__heading--wrap">
-            <div>Company - Name / Technology</div>
-            {type !== "invitation" ? <div>Offer Amount</div> : null}
+          <div className="dbs__pis__market-table__heading--wrap-1">
+            <div className="dbs__pis__market-table__heading__name-technology">Company - Name / Technology</div>
+            {type !== "invitation" ? <div className="dbs__pis__market-table__heading__offer-amount">Offer Amount</div> : null}
           </div>
-          <div className="dbs__pis__market-table__heading--wrap">
-            <div className="dbs__pis__market-table__heading__status-suppliers">
+
+          <div className="dbs__pis__market-table__heading--wrap-2">
+            <div className="dbs__pis__market-table__heading__number-suppliers">
               N° of suppliers
             </div>
-            <div>Your status</div>
+            <div className="dbs__pis__market-table__heading__status-suppliers">Your status</div>
           </div>
+          
         </div>
         <div className="dbs__pis__market-table__detail">
           {markets.map(market => (

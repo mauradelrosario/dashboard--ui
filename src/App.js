@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import "./App.css";
+import Popup from "reactjs-popup";
 import SideBar from "./components/Sidebar";
+import BurgerIcon from "./components/BurgerIcon";
+import Modal from "./components/Modal";
 import FooterContact from "./components/FooterContact";
 import PanelStatus from "./components/PanelStatus";
 import PanelInfoSupliers from "./components/PanelInfoSuppliers";
@@ -17,14 +19,13 @@ class App extends Component {
     };
     this.handleSelectedMarket = this.handleSelectedMarket.bind(this);
   }
-/*Calling the api && get a filter for each status*/
+  /*Calling the api && get a filter for each status*/
   componentDidMount() {
     fetch("/api/markets.json")
-    .then((response) => {
-      let test = response.json();
-      console.log(test);
-      return test;
-    })
+      .then(response => {
+        let test = response.json();
+        return test;
+      })
       .then(markets => {
         const invitations = this.getFilteredInvitations({ markets });
         const rfqs = this.getFilteredRfqs({ markets });
@@ -37,7 +38,6 @@ class App extends Component {
         });
       });
   }
-
 
   getFilteredInvitations({ markets }) {
     return markets.filter(market => market.statusFilter === "invitation");
@@ -72,6 +72,24 @@ class App extends Component {
               rfqs={rfqs}
               offersSent={offersSent}
             />
+            <Popup
+              modal
+              overlayStyle={{ background: "rgba(255,255,255,0.98" }}
+              // contentStyle={contentStyle}
+              closeOnDocumentClick={false}
+              trigger={open => <BurgerIcon open={open} />}
+            >
+              {close => (
+                <Modal
+                  selectedMarketState={selectedMarket}
+                  onSelectedMarket={this.handleSelectedMarket}
+                  invitations={invitations}
+                  rfqs={rfqs}
+                  offersSent={offersSent}
+                  close={close}
+                />
+              )}
+            </Popup>
           </header>
           <div className="dbs__panel--body">
             <PanelInfoSupliers
